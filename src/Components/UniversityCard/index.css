@@ -1,0 +1,150 @@
+.UniversityCard {
+	display: grid;
+	gap: 8px;
+	box-shadow: 1px 1px 8px -2px #535bf238;
+
+	border-radius: 8px;
+
+	.image-wrapper {
+		position: relative;
+
+		.building-img {
+			max-width: 100%;
+			border-radius: 4px;
+		}
+
+		.country-flag-wrapper {
+			position: absolute;
+			top: 19.3%;
+			left: 52%;
+			transform: translate(-50%, -50%);
+
+			.country-flag {
+				width: 12px;
+
+				animation: flagWave 2s infinite ease-in-out;
+			}
+		}
+
+		.stick-man {
+			position: absolute;
+			bottom: 62px;
+			left: 70px;
+			width: 70px;
+			height: 64px;
+
+			.stickman-color {
+				background-color: #ffb6c1;
+			}
+
+			.head {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+			}
+
+			.torso {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				width: 18px;
+				height: 40px;
+				border-radius: 4px;
+			}
+
+			.arms {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				display: flex;
+
+				.arm {
+					width: 10px;
+					height: 30px;
+					border-radius: 4px;
+				}
+
+				.left-arm {
+					transform-origin: bottom right;
+					transform: rotate(-130deg);
+				}
+
+				.right-arm {
+					transform-origin: bottom left;
+					transform: rotate(60deg);
+				}
+			}
+
+			.legs {
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				display: flex;
+
+				.leg {
+					width: 10px;
+					height: 30px;
+					border-radius: 2px;
+				}
+
+				.left-leg {
+					transform-origin: top right;
+					transform: rotate(30deg);
+				}
+
+				.right-leg {
+					transform-origin: top left;
+					transform: rotate(-30deg);
+				}
+			}
+		}
+	}
+
+	.university-name {
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+
+	.location-info-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		background-color: #a2a6f93d;
+		border-radius: 5px;
+		padding: 6px 8px;
+		width: max-content;
+
+		.location-icon {
+			max-width: 18px;
+		}
+	}
+}
+
+@keyframes flagWave {
+	0% {
+		transform: skewY(0deg);
+	}
+	25% {
+		transform: skewY(-5deg);
+	}
+	50% {
+		transform: skewY(0deg);
+	}
+	75% {
+		transform: skewY(5deg);
+	}
+	100% {
+		transform: skewY(0deg);
+	}
+}
