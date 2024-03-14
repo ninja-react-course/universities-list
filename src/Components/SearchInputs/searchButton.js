@@ -10,7 +10,7 @@ const searchButton = (handler, inputValues) => {
 	// Use domGenerator to create a button element with specific attributes and properties
 	return domGenerator({
 		tag: "button",
-		attributes: { "data-default-text": "Search" },
+		dataAttributes: { defaultText: "Search" },
 		properties: { textContent: "Search" },
 		// Attach a click event listener to the search button, invoking the handler function
 		eventListeners: {
